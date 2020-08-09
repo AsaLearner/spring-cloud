@@ -1,0 +1,16 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    consul:
+      # consul注册中心地址
+      host: 62.234.133.202
+      port: 8500
+      discovery:
+        hostname: 62.234.133.202
+        service-name: ${spring.application.name}
+        prefer-ip-address: true
+        health-check-url: http://localhost:${server.port}/${spring.application.name}/actuator/health
