@@ -1,0 +1,36 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AsaLearner/spring-cloud.git     #Github的Git仓库名字
+          ###搜索目录
+          search-paths:
+            - springcloud-config
+          username: AsaLearn
+          password: ljx19940421
+      ###读取分支
+      label: master
+  rabbitmq:
+    host: 192.168.174.128
+    port: 5672
+    username: guest
+    password: guest
+
+#服务注册到eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+#暴露bus的刷新端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
