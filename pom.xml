@@ -15,10 +15,12 @@
     <module>cloud-provider-payment8002</module>
     <module>cloud-provider-payment8004</module>
     <module>cloud-provider-payment8006</module>
+    <module>cloud-provider-hystrix-payment8001</module>
     <module>cloud-consumer-order</module>
     <module>cloud-consumerzk-order</module>
     <module>cloud-consumerfeign-order</module>
     <module>cloud-gateway-gateway9527</module>
+    <module>cloud-consumer-feign-hystrix-order80</module>
       <module>cloud-api-commons</module>
     <module>cloud-eureka-7001</module>
     <module>cloud-eureka-7002</module>
